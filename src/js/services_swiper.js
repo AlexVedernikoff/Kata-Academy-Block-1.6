@@ -8,7 +8,7 @@ let services__isSviperInit = false;
 let services__swiper;
 
 function services__swiperInit() {
-	const services__swiper = new Swiper('.swiper_services', {
+	const services__swiper = new Swiper('.swiperServices', {
 	  direction: 'horizontal',
 	  centeredSlides: true,   
 	  centeredSlidesBounds: true,
@@ -50,7 +50,7 @@ function services__changeClasses () {
  		// console.log('Ширина экрана меньше или равна 767px');
  		//	Если ширина экрана меньше или равна 767px, 
  		//	подключаем классы для свайпера и инициализиурем свайпер.
- 		services__switcher.classList.add('swiper_services'); 
+ 		services__switcher.classList.add('swiperServices'); 
  		services__switcherTwo.classList.add('swiper-wrapper');
  		for (var i=0; i<services__switcherThree.length; i++) {
  			services__switcherThree[i].classList.add('swiper-slide');
@@ -65,7 +65,7 @@ function services__changeClasses () {
  		// console.log('Ширина экрана больше или равна 768px');
  		//	Если ширина экрана больше или равна 768px, отключаем классы для свайпера. 
  		//	Если свайпер был включён ранее, уничтожаем его. 
- 		services__switcher.classList.remove('swiper_services');
+ 		services__switcher.classList.remove('swiperServices');
  		services__switcherTwo.classList.remove('swiper-wrapper');
  		for (var i=0; i<services__switcherThree.length; i++) {
  			services__switcherThree[i].classList.remove('swiper-slide');

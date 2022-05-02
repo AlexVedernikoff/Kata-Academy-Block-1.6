@@ -17,6 +17,21 @@
 	}
 }
 
+
+@media all and (max-width: 767px) {
+	.aside__open {
+		width: 100%;
+	}
+}
+
+@media all and (min-width: 768px) {
+	.aside__open {
+		width: 320px;
+	}
+}
+
+
+
 .aside__open {
 	transform: translateX(340px);
 	transition-property: transform;
@@ -126,7 +141,7 @@
 
 .aside__menu ul li:hover::before {
 	display: inline-block;
-	background-image: url("Assets/Images/highlightSmall.png"); 
+	background-image: url("../../src/img/highlightSmall.png"); 
 	vertical-align: middle;
 	content: "";
 	position: absolute;

@@ -2,7 +2,7 @@ import Swiper, {Pagination} from './swiper-bundle.min.js';
 Swiper.use ([Pagination]);
 
 function scrollMenu__swiperInit() {
-	const swiper = new Swiper('.swiper_scrollMenu', {
+	const swiper = new Swiper('.swiperScroll', {
 	  // centeredSlides: true,   
 	  // centeredSlidesBounds: true,
 	  // watchOverflow: true,

@@ -1,5 +1,5 @@
-let feedBack__buttonOpen_first = document.querySelector('.feedBack__chat_first');
-let feedBack__buttonOpen_second = document.querySelector('.feedBack__chat_second');
+let feedBack__buttonOpen_first = document.querySelector('.header-menu__button__feedBack-chat-first');
+let feedBack__buttonOpen_second = document.querySelector('.aside__button__feedBack-chat-second');
 let feedBack__button_close = document.querySelector('.feedBack__button');
 let feedBack__page = document.querySelector('.feedBack');
 let feedBack__blur = document.querySelector('.wrapper');
@@ -46,6 +46,7 @@ feedBack__button_close.onclick = function () {
 // let timerId = setInterval(() => console.log('Открыто ли окно обратной связи сейчас: ' + isFeedBackOpen), 2000);
 
 document.addEventListener('click',function(event) {
+  feedBackWidth = feedBack__page.clientWidth;
   // console.log('Сравниваем event.target ' + (event.target.id == 'chat_second'));
   if ( (event.pageX < (document.body.clientWidth  - feedBackWidth) ||
         event.pageY > feedBackHeight)
@@ -56,8 +57,8 @@ document.addEventListener('click',function(event) {
 });
 
 //-------------------------------------------------------------------------------------------------------------------------//
-let callBack__buttonOpen_first = document.querySelector('.callBack__chat_first');
-let callBack__buttonOpen_second = document.querySelector('.callBack__chat_second');
+let callBack__buttonOpen_first = document.querySelector('.header-menu__button__callBack-chat-first');
+let callBack__buttonOpen_second = document.querySelector('.aside__button__callBack-chat-second');
 let callBack__button_close = document.querySelector('.callBack__button');
 let callBack__page = document.querySelector('.callBack');
 let callBack__blur = document.querySelector('.wrapper');
@@ -104,6 +105,10 @@ callBack__button_close.onclick = function () {
 
 document.addEventListener('click',function(event) {
   // console.log('Сравниваем event.target ' + (event.target.id == 'chat_second'));
+  callBackWidth = callBack__page.clientWidth;
+  // console.log("Ширина страницы: " + document.body.clientWidth);
+  // console.log('Ширина окна "Заказать звонок": ' + callBackWidth);
+
   if ( (event.pageX < (document.body.clientWidth  - callBackWidth) ||
         event.pageY > callBackHeight)
         && isСallBackOpen == true && event.target.id != 'call_second') {
@@ -114,10 +119,11 @@ document.addEventListener('click',function(event) {
 
 //-------------------------------------------------------------------------------------------------------------------------//
 
-let aside__button_open = document.querySelector('.nav__burger');
+let aside__button_open = document.querySelector('.header-menu__button');
 let aside__button_close = document.querySelector('.aside__close');
 let aside__page = document.querySelector('.aside');
 let aside__blur = document.querySelector('.wrapper');
+let asideWidth = aside__page.clientWidth;
 let asideHeight = aside__page.clientHeight;
 
 aside__button_open.onclick = function () {
@@ -140,7 +146,9 @@ document.addEventListener('click',function(event) {
   // console.log('Координаты клика мыши по оси X относительно верхнего края документа: ' + event.pageX);
   // console.log('Координаты клика мыши по оси Y относительно верхнего края документа: ' + event.pageY);
 
-  if (  (event.clientX > 320 || event.pageY > asideHeight)  && document.body.clientWidth < 1120  
+  asideWidth = aside__page.clientWidth;
+
+  if (  (event.clientX > asideWidth || event.pageY > asideHeight)  && document.body.clientWidth < 1120  
     && isFeedBackOpen == false && isСallBackOpen == false) {
     aside__page.classList.remove('aside__open');
     aside__blur.classList.remove('wrapper__blur');

@@ -8,6 +8,9 @@ import './services_swiper.js';
 import './trademarks_button.js';
 import './trademarks_swiper.js';
 import './scroll_swiper.js';
+import './flex_width.js';
+
+
 
 
 

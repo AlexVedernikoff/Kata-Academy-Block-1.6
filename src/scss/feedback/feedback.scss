@@ -36,18 +36,17 @@
 }
 
 
-@media all and (max-width: 440px) {
+@media all and (max-width: 767px) {
 	.feedBack__open {
 		width: 100%;
 	}
 }
 
-@media all and (min-width: 441px) {
+@media all and (min-width: 768px) {
 	.feedBack__open {
 		width: 440px;
 	}
 }
-
 
 
 .feedBack__wrapper {
@@ -72,17 +71,17 @@
 	
 }
 
-.feedBack__header h1 {
+.feedBack__header h2 {
 	font-weight: 800;
 	font-size: 24px;
 	line-height: 32px;
 	position: relative
 }
 
-.feedBack__header h1::before {
+.feedBack__header h2::before {
 	content: "";
 	display: inline-block;
-	background-image: url("Assets/Images/highlight.png"); 
+	background-image: url("../../src/img/highlight.png"); 
 	background-repeat: no-repeat;
 	margin-right: 15px;
 	width: 4px;

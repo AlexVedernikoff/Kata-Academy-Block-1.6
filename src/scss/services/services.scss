@@ -50,7 +50,7 @@
 }
 
 
-.services__wrapper h1 {
+.services__wrapper h2 {
 	display: inline-block;
 	vertical-align: middle;
 	opacity: 0.6;
@@ -322,7 +322,7 @@
 	height: 20px;
 	display: inline-block;
 	vertical-align: middle;
-	background-image: url("Assets/Images/Line.svg"); 
+	background-image: url("../../src/img/Line.svg"); 
 	background-repeat: no-repeat;
 	background-position: center center;
 }

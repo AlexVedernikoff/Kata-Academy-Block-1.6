@@ -3,7 +3,7 @@ Swiper.use ([Pagination]);
 
 
 let switcher = document.querySelector('.trademarks__wrapper:nth-child(2)');
-let switcherTwo = document.querySelector('.trademarks__main');
+let switcherTwo = document.querySelector('.trademarks__content');
 let switcherThree = document.querySelectorAll('.trademarks__logo');
 let isSviperInit = false;
 let swiper;
